@@ -1,0 +1,10 @@
+plugins:
+  - name: auth
+    default:
+      allow: true
+listeners:
+  default:
+    type: tcp
+    tcp:
+      host: 0.0.0.0
+      port: 1883

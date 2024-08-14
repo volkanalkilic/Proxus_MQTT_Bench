@@ -1,0 +1,92 @@
+services:
+  emqx:
+    image: emqx/emqx:latest
+    ports:
+      - "1890:1883"
+      - "18083:18083"
+    environment:
+      - EMQX_ALLOW_ANONYMOUS=true
+    volumes:
+      - ./emqx.conf:/opt/emqx/etc/emqx.conf:ro
+    deploy:
+      resources:
+        limits:
+          cpus: '0'
+          memory: '0'
+
+  hivemq:
+    image: hivemq/hivemq4:latest
+    ports:
+      - "1884:1883"
+#    volumes:
+#      - ./hivemq-config.xml:/opt/hivemq/conf/config.xml:ro
+    deploy:
+      resources:
+        limits:
+          cpus: '0'
+          memory: '0'
+
+  mosquitto:
+    image: eclipse-mosquitto:latest
+    ports:
+      - "1885:1883"
+    volumes:
+      - ./mosquitto.conf:/mosquitto/config/mosquitto.conf
+    deploy:
+      resources:
+        limits:
+          cpus: '0'
+          memory: '0'
+
+  vernemq:
+    image: vernemq/vernemq:latest
+    ports:
+      - "1887:1883"
+    environment:
+      - DOCKER_VERNEMQ_ACCEPT_EULA=yes
+      - DOCKER_VERNEMQ_ALLOW_ANONYMOUS=on
+    deploy:
+      resources:
+        limits:
+          cpus: '0'
+          memory: '0'
+
+  volantmq:
+    image: volantmq/volantmq:latest
+    ports:
+      - "1889:1883"
+    volumes:
+      - ./volantmq.yaml:/volantmq/config.yaml
+    deploy:
+      resources:
+        limits:
+          cpus: '0'
+          memory: '0'
+
+  activemq:
+    image: rmohr/activemq:latest
+    ports:
+      - "1891:1883"
+    environment:
+      - ACTIVEMQ_OPTS=-Dorg.apache.activemq.SERIALIZABLE_PACKAGES=*
+    deploy:
+      resources:
+        limits:
+          cpus: '0'
+          memory: '0'
+
+  rabbitmq:
+    image: rabbitmq:management
+    ports:
+      - "1892:1883"
+    volumes:
+      - ./rabbitmq.conf:/etc/rabbitmq/rabbitmq.conf
+      - ./rabbitmq-enabled-plugins:/etc/rabbitmq/enabled_plugins
+    environment:
+      - RABBITMQ_DEFAULT_USER=guest
+      - RABBITMQ_DEFAULT_PASS=guest
+    deploy:
+      resources:
+        limits:
+          cpus: '0'
+          memory: '0'
