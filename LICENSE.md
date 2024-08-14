@@ -1,6 +1,6 @@
 MIT License
 
-Copyright (c) 2023 Volkan Alkılıç
+Copyright (c) 2024 Volkan Alkılıç
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
