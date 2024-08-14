@@ -9,7 +9,7 @@ This tool was initially developed to test the embedded MQTT broker used in the *
 
 **Disclaimer:**
 
-This tool is designed to provide a standardized and repeatable benchmarking process. However, it's important to note that I'm not an expert in optimizing broker performance for each specific implementation, nor am I a seasoned software developer. The benchmark results may not reflect the absolute maximum performance achievable, and the code itself might benefit from community contributions.
+This tool is designed to provide a standardized and repeatable benchmarking process. However, it's important to note that I'm not an expert in optimizing broker performance for each specific implementation. The benchmark results may not reflect the absolute maximum performance achievable, and the code itself might benefit from community contributions.
 
 **Community Support:**
 
