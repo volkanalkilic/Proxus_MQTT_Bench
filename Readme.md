@@ -5,7 +5,7 @@ Proxus MQTT Bench: A Comprehensive MQTT Broker Benchmarking Tool
 
 **Story:**
 
-This tool was initially developed to test the embedded MQTT broker used in the **Proxus IIoT Platform** ([https://www.proxus.io](https://www.proxus.io/)). Recognizing its potential for broader use, I decided to expand its capabilities to benchmark other popular MQTT brokers.
+This tool was initially developed to test the embedded MQTT broker used in the **Proxus IIoT Platform** ([https://proxus.io](https://proxus.io/)). Recognizing its potential for broader use, I decided to expand its capabilities to benchmark other popular MQTT brokers.
 
 **Disclaimer:**
 
